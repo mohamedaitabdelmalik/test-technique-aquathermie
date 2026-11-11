@@ -138,7 +138,7 @@ if __name__ == "__main__":
             fig.update_yaxes(title_text="<b>Température [°C]</b>", secondary_y=True, color='red')
 
             output_html = f"graph_{file.replace('.csv', '')}.html"
-            fig.write_html(output_html)
+            fig.write_html(output_html, include_plotlyjs='cdn')
             print(f"   ✅ Graphique sauvegardé : {output_html}")
 
         except Exception as e:
